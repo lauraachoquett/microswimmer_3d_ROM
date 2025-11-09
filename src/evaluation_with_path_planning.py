@@ -9,12 +9,10 @@ from tqdm import tqdm
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import json
 import pickle
-from math import ceil, cos, sin, sqrt
 
 import numpy as np
 from scipy.spatial import KDTree
 
-from Astar import resample_path, shortcut_path
 from src.env_swimmer import MicroSwimmer
 from src.generate_path import *
 from src.TD3 import TD3
@@ -25,23 +23,18 @@ import os
 import random
 import sys
 from datetime import datetime
-from itertools import chain
 from pathlib import Path
 from statistics import mean
 
 from scipy.interpolate import RegularGridInterpolator
-from scipy.ndimage import gaussian_filter1d
 
-from src.analytic_solution_line import find_next_v
 from src.Astar_ani import astar_anisotropic, compute_v, resample_and_smooth
 from src.plot_visualize_a_star import contour_2D
 
-from src.data_loader import load_sdf_from_csv, load_sim_sdf, vel_read
+from src.data_loader import load_sdf_from_csv, load_sim_sdf
 from src.evaluate_agent import evaluate_agent
-from src.plot import plot_action, plot_success_rate, plot_trajectories
+from src.plot import plot_success_rate
 from src.utils import create_numbered_run_folder
-from src.visualize import (plot_robust_D, plot_robust_u_bg_rankine,
-                           plot_robust_u_bg_uniform, visualize_streamline)
 
 # Ajouter le dossier 'src' au sys.path pour permettre l'importation des modules dans src
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))

@@ -2,24 +2,32 @@ import heapq
 import os
 import time
 from datetime import datetime
-from math import ceil, gcd, sqrt
-from functools import reduce
+from math import ceil
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
-from matplotlib.colors import LogNorm
-from scipy.interpolate import RegularGridInterpolator, splev, splprep
 from scipy.ndimage import gaussian_filter1d
 from tqdm import tqdm
 import pyvista as pv
 import numpy as np
 
-from src.utils import gcd_of_three,generate_directions_3d
-from src.Astar import resample_path
-from src.data_loader import load_sdf_from_csv, load_sim_sdf, vel_read,plot_sdf_slices
-from src.fmm import sdf_func_and_velocity_func
+from src.utils import generate_directions_3d
+from src.data_loader import load_sim_sdf,plot_sdf_slices
 from src.plot_visualize_a_star import plot_a_star,save_grid_paraview
 from src.plot import paraview_export
+import numpy as np
+from scipy.interpolate import interp1d
+
+
+
+def resample_path(path, n_points=500):
+    distances = np.sqrt(np.sum(np.diff(path, axis=0) ** 2, axis=1))
+    cumulative = np.concatenate(([0], np.cumsum(distances)))
+    total_length = cumulative[-1]
+    fx = interp1d(cumulative, path[:, 0], kind="linear")
+    fy = interp1d(cumulative, path[:, 1], kind="linear")
+    fz = interp1d(cumulative, path[:, 2], kind="linear")
+    new_distances = np.linspace(0, total_length, n_points)
+    return np.stack((fx(new_distances), fy(new_distances),fz(new_distances)), axis=1), np.sum(distances)
 
 def heuristic(i1, j1,k1, i2, j2,k2, dx, dy,dz):
     """

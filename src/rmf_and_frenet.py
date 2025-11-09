@@ -1,7 +1,4 @@
-import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.animation import FFMpegWriter, FuncAnimation
-from mpl_toolkits.mplot3d import Axes3D
 
 
 def compute_frenet_frame(path, dim):

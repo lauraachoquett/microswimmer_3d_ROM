@@ -45,6 +45,7 @@ def load_sim_sdf(ratio):
     scale = L / abs(np.min(sdf))
     
     print("SDF :",sdf.shape)
+    
     ## First inerpolation on a standard domain
     sdf_interpolator = RegularGridInterpolator(
         (z,y, x), sdf, bounds_error=False, fill_value=None
@@ -210,18 +211,7 @@ def plot_sdf_slices(sdf_phys,X,Y,Z,ix,iy,iz,target_point,start_point,name_fig):
     
     
 if __name__ == "__main__":
-    # ratio = 5
-    # print(z_phys[len(z_phys)//2])
-    # start_point = (physical_width * 0.98, physical_height * 0.3,physical_depth*0.5)
-    # goal_point = (physical_width*0.3 , physical_height *0.8, physical_depth* 0.5)
-    # print(sdf_func_phys(start_point))
-    # Nx, Ny, Nz = sdf_phys.shape
-    # ix, iy, iz =530, Ny // 4, Nz // 2
-    # X, Y,Z = np.meshgrid(x_phys, y_phys,z_phys)
-    # plot_sdf_slices(sdf_phys,X,Y,Z,ix,iy,iz,goal_point,start_point,'slices')
-    # ratio = 5
-    # sdf_func_phys,sdf_phys,velocity_retina,x_phys,y_phys,z_phys,physical_depth,physical_width,physical_height,scale = load_sim_sdf(ratio)
-    # grid_size = (len(x_phys), len(y_phys),len(z_phys))
+
     
 
     # === Lecture des fichiers ===

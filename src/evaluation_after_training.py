@@ -19,7 +19,6 @@ import random
 from pathlib import Path
 from statistics import mean
 
-from src.analytic_solution_line import find_next_v
 from src.distance_to_path import min_dist_closest_point
 from src.evaluate_agent import evaluate_agent
 from src.invariant_state import coordinate_in_global_ref
