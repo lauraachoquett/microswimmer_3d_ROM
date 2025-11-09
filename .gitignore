@@ -8,6 +8,8 @@ data/
 seq*/
 data_a_star/
 data_trajectories/
+comparison_nlookahead/
+fig/
 
 Part2.md
 Part1.md
@@ -34,3 +36,4 @@ paraview/
 *.mp4
 *.npz
 *.csv
+.DS_Store
