@@ -6,13 +6,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 import copy
-from src.generate_path import *
+from src.utils.generate_path import *
 from scipy.spatial import KDTree
 from src.env_swimmer import MicroSwimmer
-from src.evaluate_agent import evaluate_agent
-from src.plot import plot_trajectories
+from src.evaluation.evaluate_agent import evaluate_agent
+from src.plot_visualization.plot import plot_trajectories
 import pickle
-from src.plot import hist_scientific
+from src.plot_visualization.plot import hist_scientific
 from src.TD3 import TD3
 import plotly.graph_objects as go
 

@@ -16,9 +16,9 @@ from mpl_toolkits.mplot3d import Axes3D  # nécessaire pour l'import
 import pandas as pd
 
 colors_default = plt.cm.tab10.colors
-from src.generate_path import (generate_curve, generate_demi_circle_path,
+from src.utils.generate_path import (generate_curve, generate_demi_circle_path,
                                generate_random_ondulating_path)
-from src.simulation import rankine_vortex, uniform_velocity
+from src.utils.simulation import rankine_vortex, uniform_velocity
 
 
 def video_trajectory(
