@@ -14,7 +14,7 @@ from tqdm import tqdm
 import pyvista as pv
 import numpy as np
 
-from src.sdf import get_contour_coordinates
+from src.utils.sdf import get_contour_coordinates
 
 def contour_2D(sdf_function, X_new, Y_new, scale):
     if os.path.exists(f"data/retina2D_contour_scale_{scale}.npy"):

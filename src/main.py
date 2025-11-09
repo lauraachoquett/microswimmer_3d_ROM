@@ -12,22 +12,19 @@ import time
 
 import src.TD3 as TD3
 from src.env_swimmer import MicroSwimmer
-from src.evaluate_agent import evaluate_agent
-from src.generate_path import *
-from src.invariant_state import *
-from src.simulation import rankine_vortex, uniform_velocity
+from src.evaluation.evaluate_agent import evaluate_agent
+from src.utils.generate_path import *
+from src.utils.invariant_state import *
+from src.utils.simulation import rankine_vortex, uniform_velocity
 from src.utils import ReplayBuffer, courbures, random_bg_parameters,generate_state_noise
-from src.frenet import compute_frenet_frame, double_reflection_rmf
-from src.analyze_state import states_scaled
+from src.utils.rmf_and_frenet import compute_frenet_frame, double_reflection_rmf
+from src.analyze.analyze_state import states_scaled
 colors = plt.cm.tab10.colors
 import copy
 import json
-import random
 from statistics import mean
 
 import shutil
-from src.visualize import visualize_streamline
-from math import gamma
 
 
 def format_sci(x):

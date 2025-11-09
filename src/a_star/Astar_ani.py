@@ -6,14 +6,13 @@ from math import ceil
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.ndimage import gaussian_filter1d
-from tqdm import tqdm
 import pyvista as pv
 import numpy as np
 
 from src.utils import generate_directions_3d
 from src.data_loader import load_sim_sdf,plot_sdf_slices
-from src.plot_visualize_a_star import plot_a_star,save_grid_paraview
-from src.plot import paraview_export
+from src.plot_visualization.plot_visualize_a_star import plot_a_star,save_grid_paraview
+from src.plot_visualization.plot import paraview_export
 import numpy as np
 from scipy.interpolate import interp1d
 

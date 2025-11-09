@@ -4,30 +4,19 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import json
 import pickle
-from math import cos, sin
 
 import numpy as np
 from scipy.spatial import KDTree
 
 from src.env_swimmer import MicroSwimmer
-from src.generate_path import *
+from src.utils.generate_path import *
 from src.TD3 import TD3
 
-colors = plt.cm.tab10.colors
 import copy
-import random
-from pathlib import Path
 from statistics import mean
 
-from src.distance_to_path import min_dist_closest_point
-from src.evaluate_agent import evaluate_agent
-from src.invariant_state import coordinate_in_global_ref
-from src.plot import (plot_action, plot_html_3d, plot_trajectories,
-                      plot_trajectories_3D)
-from src.rank_agents import rank_agents_by_rewards
-from src.simulation import solver
-from src.visualize import (plot_robust_D, plot_robust_u_bg_rankine,
-                           plot_robust_u_bg_uniform, visualize_streamline)
+from src.evaluation.evaluate_agent import evaluate_agent
+from src.analyze.rank_agents import rank_agents_by_rewards
 
 
 def format_sci(x):
