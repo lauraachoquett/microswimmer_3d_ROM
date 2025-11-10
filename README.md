@@ -1,4 +1,4 @@
-# Micro-Swimmer Control using Deep Reinforcement Learning - Part 3 - 3D
+# Micro-Swimmer Control using Deep Reinforcement Learning - 3D
 
 
 

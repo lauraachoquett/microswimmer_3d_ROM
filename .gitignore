@@ -37,5 +37,8 @@ paraview/
 *.mp4
 *.npz
 *.csv
+*.sh
+
 .DS_Store
 Part3.md
+
