@@ -5,6 +5,7 @@ results_evaluation_without_path/
 .vscode/
 change_config.py
 data/
+fig/
 seq*/
 data_a_star/
 data_trajectories/
@@ -37,3 +38,4 @@ paraview/
 *.npz
 *.csv
 .DS_Store
+Part3.md
