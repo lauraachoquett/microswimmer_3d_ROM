@@ -1,7 +1,7 @@
 # Micro-Swimmer Control using Deep Reinforcement Learning - 3D
 
 This repository contains the **3D training and evaluation** part of the project.  
-It extends the approach developed in the [**2D repository**](<link-to-2D-repo>); for detailed explanations of the method and implementation, please refer there.
+It extends the approach developed in the [**2D repository**](https://github.com/lauraachoquett/microswimmer_internship); for detailed explanations of the method and implementation, please refer there.
 
 
 ##  Reinforcement Learning environment
