@@ -27,7 +27,7 @@ paraview/
 *.vti
 *.vtp
 *.jpeg
-*.png
+
 *.pdf
 *.zip
 *.sh
