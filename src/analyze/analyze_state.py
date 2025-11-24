@@ -4,9 +4,9 @@ import os
 from pathlib import Path
 
 import copy
-from src.env_swimmer import MicroSwimmer
+from  env_swimmer import MicroSwimmer
 import pickle
-from src.TD3 import TD3
+from  TD3 import TD3
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 from tqdm import tqdm
@@ -59,14 +59,14 @@ def initialize_parameters(agent_file, p_target, p_0, nb_points_path):
     return config_eval
 
 
-filename = 'data/states.pkl'
-with open(filename, 'rb') as f:
-    states = pickle.load(f)
-    states = np.array(states)
+# filename = 'data/states.pkl'
+# with open(filename, 'rb') as f:
+#     states = pickle.load(f)
+#     states = np.array(states)
     
 
 
-scale_pos = np.linspace(1,500,50,dtype=int)
+# scale_pos = np.linspace(1,500,50,dtype=int)
 
 def states_scaled(agents_file):
     fig, axs = plt.subplots(1, 1, figsize=(12, 6))

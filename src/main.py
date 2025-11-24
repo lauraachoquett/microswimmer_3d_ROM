@@ -10,15 +10,15 @@ import torch
 from scipy.spatial import KDTree
 import time
 
-import src.TD3 as TD3
-from src.env_swimmer import MicroSwimmer
-from src.evaluation.evaluate_agent import evaluate_agent
-from src.utils.generate_path import *
-from src.utils.invariant_state import *
-from src.utils.simulation import rankine_vortex, uniform_velocity
-from src.utils import ReplayBuffer, courbures, random_bg_parameters,generate_state_noise
-from src.utils.rmf_and_frenet import compute_frenet_frame, double_reflection_rmf
-from src.analyze.analyze_state import states_scaled
+import TD3 as TD3
+from env_swimmer import MicroSwimmer
+from evaluation.evaluate_agent import evaluate_agent
+from utils.generate_path import *
+from utils.invariant_state import *
+from utils.simulation import rankine_vortex, uniform_velocity
+from utils.utils import ReplayBuffer, courbures, random_bg_parameters,generate_state_noise
+from utils.rmf_and_frenet import compute_frenet_frame, double_reflection_rmf
+from analyze.analyze_state import states_scaled
 colors = plt.cm.tab10.colors
 import copy
 import json

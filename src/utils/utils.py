@@ -184,6 +184,3 @@ def convertir_pickle_en_json_recursif(repertoire):
                     print(f"Erreur lors de la conversion de {chemin_fichier} : {e}")
 
 
-# Exemple d'utilisation
-repertoire_pickle = "agents/"  # Remplacez par le chemin de votre répertoire
-convertir_pickle_en_json_recursif(repertoire_pickle)

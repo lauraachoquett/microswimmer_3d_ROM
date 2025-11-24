@@ -4,15 +4,15 @@ from statistics import mean
 import matplotlib.pyplot as plt
 import numpy as np
 
-from src.frenet import compute_frenet_frame, double_reflection_rmf
-from src.simulation import rankine_vortex, uniform_velocity
-from src.utils import random_bg_parameters
+from  utils.rmf_and_frenet import compute_frenet_frame, double_reflection_rmf
+from  utils.simulation import rankine_vortex, uniform_velocity
+from  utils.utils import random_bg_parameters
 
 colors = plt.cm.tab10.colors
 import copy
 
-from src.generate_path import generate_curve
-from src.plot import (plot_html_3d, plot_trajectories, plot_trajectories_3D,
+from  utils.generate_path import generate_curve
+from  plot_visualization.plot import (plot_html_3d, plot_trajectories, plot_trajectories_3D,
                       video_trajectory,paraview_export)
 
 

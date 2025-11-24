@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-from src.plot_visualization.plot import analyze_and_visualize_agent_data
+from  plot_visualization.plot import analyze_and_visualize_agent_data
 
 
 def rank_agents_by_rewards(results, print_stats=True):

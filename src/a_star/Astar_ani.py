@@ -9,10 +9,10 @@ from scipy.ndimage import gaussian_filter1d
 import pyvista as pv
 import numpy as np
 
-from src.utils import generate_directions_3d
-from src.data_loader import load_sim_sdf,plot_sdf_slices
-from src.plot_visualization.plot_visualize_a_star import plot_a_star,save_grid_paraview
-from src.plot_visualization.plot import paraview_export
+from  utils import generate_directions_3d
+from  data_loader import load_sim_sdf,plot_sdf_slices
+from  plot_visualization.plot_visualize_a_star import plot_a_star,save_grid_paraview
+from  plot_visualization.plot import paraview_export
 import numpy as np
 from scipy.interpolate import interp1d
 

@@ -13,9 +13,9 @@ import pickle
 import numpy as np
 from scipy.spatial import KDTree
 
-from src.env_swimmer import MicroSwimmer
-from src.utils.generate_path import *
-from src.TD3 import TD3
+from  env_swimmer import MicroSwimmer
+from  utils.generate_path import *
+from  TD3 import TD3
 
 import copy
 import os
@@ -27,13 +27,13 @@ from statistics import mean
 
 from scipy.interpolate import RegularGridInterpolator
 
-from src.a_star.Astar_ani import astar_anisotropic, compute_v, resample_and_smooth
-from src.plot_visualization.plot_visualize_a_star import contour_2D
+from  a_star.Astar_ani import astar_anisotropic, compute_v, resample_and_smooth
+from  plot_visualization.plot_visualize_a_star import contour_2D
 
-from src.data_loader import load_sdf_from_csv, load_sim_sdf
-from src.evaluation.evaluate_agent import evaluate_agent
-from src.plot_visualization.plot import plot_success_rate
-from src.utils import create_numbered_run_folder
+from  data_loader import load_sdf_from_csv, load_sim_sdf
+from  evaluation.evaluate_agent import evaluate_agent
+from  plot_visualization.plot import plot_success_rate
+from  utils import create_numbered_run_folder
 
 # Ajouter le dossier 'src' au sys.path pour permettre l'importation des modules dans src
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))

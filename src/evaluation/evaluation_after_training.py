@@ -8,15 +8,15 @@ import pickle
 import numpy as np
 from scipy.spatial import KDTree
 
-from src.env_swimmer import MicroSwimmer
-from src.utils.generate_path import *
-from src.TD3 import TD3
+from  env_swimmer import MicroSwimmer
+from  utils.generate_path import *
+from  TD3 import TD3
 
 import copy
 from statistics import mean
 
-from src.evaluation.evaluate_agent import evaluate_agent
-from src.analyze.rank_agents import rank_agents_by_rewards
+from  evaluation.evaluate_agent import evaluate_agent
+from  analyze.rank_agents import rank_agents_by_rewards
 
 
 def format_sci(x):

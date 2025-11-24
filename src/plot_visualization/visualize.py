@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-from src.evaluation.evaluate_agent import evaluate_agent
+from  evaluation.evaluate_agent import evaluate_agent
 
 colors = plt.cm.tab10.colors
 import copy
@@ -15,11 +15,11 @@ from statistics import mean, stdev
 
 from scipy.spatial import KDTree
 
-from src.env_swimmer import MicroSwimmer
-from src.utils.generate_path import (generate_curve, generate_demi_circle_path,
+from  env_swimmer import MicroSwimmer
+from  utils.generate_path import (generate_curve, generate_demi_circle_path,
                                generate_random_ondulating_path,
                                generate_simple_line)
-from src.plot_visualization.plot import plot_background_velocity, plot_trajectories
+from  plot_visualization.plot import plot_background_velocity, plot_trajectories
 
 
 def format_sci(x):
